@@ -1,4 +1,6 @@
 # NFT-Market-Place
-a developing marketplace similar to open sea but with some extra features. Currently underdevelopment
+A  marketplace similar to open sea but with some extra features. Currently under development.
+
 The backend for this project will be made using Next Js and Mongo DB
-then using Vercel or netifly , we can upload it live
+
+Then using Vercel or Netlify , we can upload it live
