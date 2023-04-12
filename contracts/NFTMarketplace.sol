@@ -7,6 +7,8 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "hardhat/console.sol";
 
+// basic erc721 contract for token ids creation and item sold count
+
 contract NFTMarketPlace is ERC721URIStorage {
       using Counters for Counters.Counter;
       Counters.Counter private _tokenIds;
@@ -26,7 +28,7 @@ contract NFTMarketPlace is ERC721URIStorage {
         bool sold;
 
       }
-
+// event IdMarket creation for showing seller, owner and item info such as address, amount etc
       event idMarketItemCreated(
 
         uint256 indexed tokenId,
@@ -97,16 +99,16 @@ contract NFTMarketPlace is ERC721URIStorage {
      }
 
      //function for resale nft
-     function resellToken(uint256 tokenId, uint256 price) public payable {
-
-      require(idMarketItem[tokenId].owner == msg.sender, "only Item Onwer can perform this");
+     function resellToken(uint256 tokenId, uint256 price) public payable 
+     {
+     require(idMarketItem[tokenId].owner == msg.sender, "only Item Onwer can perform this");
       require(msg.value == listingPrice, "Price msut be equal to listing price");
       idMarketItem[tokenId].sold = false;
       idMarketItem[tokenId].price = price;
       idMarketItem[tokenId].seller = payable(msg.sender);
       idMarketItem[tokenId].owner = payable(address(this));
       _itemsSold.decrement();
-
+      
       _transfer(msg.sender, address(this), tokenId);
 
      }
