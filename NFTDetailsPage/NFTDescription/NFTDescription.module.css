@@ -38,6 +38,7 @@
     padding: .5rem 0;
 }
 
+
 .NFTDescription_box_share_box_social a:hover{
     background-color: var(--icons-color);
     color: var(--main-bg-color);
