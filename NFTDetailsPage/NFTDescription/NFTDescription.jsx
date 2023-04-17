@@ -84,6 +84,8 @@ const NFTDescription = () => {
       setOwner(false);
     }
   };
+  
+  
 
   const openOwmer = () => {
     if (!owner) {
