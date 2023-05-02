@@ -70,8 +70,7 @@ const NFTDescription = () => {
       setNFTMenu(false);
     }
   };
-
-  const openTabs = (e) => {
+ const openTabs = (e) => {
     const btnText = e.target.innerText;
 
     if (btnText == "Bid History") {
